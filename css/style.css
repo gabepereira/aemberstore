@@ -1,0 +1,22 @@
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+    text-decoration: none;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+}

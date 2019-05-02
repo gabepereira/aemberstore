@@ -1,0 +1,9 @@
+html, body {
+    overflow-x: hidden;
+}
+
+h1, p {
+    margin: 0;
+    padding: 0;
+    color: #000000;
+}
