@@ -142,18 +142,47 @@ header p {
     color: #FFFFFF;
 }
 
-.product-wrapper {
+#product-wrapper {
     padding: 24px 0 0;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .product {
-    cursor: pointer;
     margin: 12px;   
     width: 220px;
     height: 360px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-img {
+    z-index: 0;
     background-color: #FFFFFF;
+    cursor: pointer;
+    height: 100%;
+}
+
+.product-info {
+    cursor: pointer;
+    height: 96px;
+    display: flex;
+}
+
+.product-name {
+    font-size: var(--header-lower);
+    color: #FFFFFF;
+    cursor: pointer;
+    margin: auto;
+    transition: color 0.25s ease;
+}
+
+.product-name:hover {
+    color: #F79C1D;
+}
+
+.product-info:hover .product-name {
+    color: #F79C1D;
 }
 
 /*------------------------------- OPTIONS ------------*/
