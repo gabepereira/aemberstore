@@ -5,6 +5,9 @@
     --header-lower-margin: calc(30px + (36 - 30) * ((100vw - 640px) / (1600 - 640)));
     --home-h1: calc(48px + (96 - 48) * ((100vw - 640px) / (1600 - 640)));
     --home-line-height: calc(52px + (96 - 52) * ((100vw - 640px) / (1600 - 640)));
+    --mob-menu: calc(20px + (24 - 20) * ((100vw - 320px) / (640 - 320)));
+    --mob-home-h1: calc(56px + (64 - 56) * ((100vw - 320px) / (640 - 320)));
+    --mob-home-line-height: calc(52px + (64 - 52) * ((100vw - 320px) / (640 - 320)));
 }
 
 * { -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: default; }
@@ -16,8 +19,7 @@ html, body {
 
 body {
     position: relative;
-    overflow-y: scroll;
-    overflow-y: overlay;
+    overflow-y: auto;
 }
 
 body.land {
@@ -25,11 +27,12 @@ body.land {
     overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6, p, a {
-    text-decoration: none;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Staatliches', 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 p, a {
+    text-decoration: none;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
@@ -84,6 +87,10 @@ section, .shadow {
 
 .col5 {
     width: 50%;
+}
+
+.colf {
+    width: 100%;
 }
 
 @media only screen and (max-width: 640px) {
