@@ -1,0 +1,19 @@
+#product {
+    z-index: -1;
+    background-color: #000000;
+}
+
+#product h1, p, a {
+    color: #FFFFFF;
+}
+
+#product-img {
+    margin: 24px;
+    width: 460px;
+    height: 560px;
+    background-color: #FFFFFF;
+}
+
+.size {
+    color: #FFFFFF;
+}

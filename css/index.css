@@ -1,99 +1,6 @@
-html, body {
-    overflow-x: hidden;
-}
-
-h1, p {
-    margin: 0;
-    padding: 0;
-    color: #000000;
-}
-
 section:nth-child(3) {
     background-color: #000000;
 }
-
-/*----------------------------------- HEADER -----------*/
-
-header {
-    display: flex;
-    background-color: #000000;
-}
-
-header .upper, header .lower, .white-line {
-    width: 100vw;
-}
-
-header .upper {
-    height: 5vh;
-}
-
-header .lower {
-    height: 10vh;
-}
-
-.white-line {
-    background-color: #999999;
-    height: 1px;
-}
-
-header h1, header a {
-    color: #FFFFFF;
-}
-
-header p, header .upper a {
-    font-size: var(--header-upper);
-}
-
-header .lower a {
-    font-size: var(--header-lower);
-}
-
-.logo {
-    width: auto;
-    height: var(--header-logo);
-}
-
-header .upper a.signup {
-    margin-right: 6px;
-    font-weight: 600;
-}
-
-header a {
-    margin: auto var(--header-lower-margin);
-    transition: color 0.25s ease;
-}
-
-header a:hover {
-    color: #F79C1D;
-}
-
-header p {
-    color: #CCCCCC;
-}
-
-#menu {
-    display: none;
-}
-
-#search {
-    height: var(--header-lower);;
-}
-
-#menu {
-    height: 18px;
-}
-
-#aember .white, #search .white, #account .white, #menu .white {
-    cursor: pointer;
-    fill: #FFFFFF;
-    transition: fill 0.25s ease;
-}
-
-#aember:hover .white, #search:hover .white, #account:hover .white {
-    fill: #F79C1D;
-}
-
-/*----------------------------------- HEADER -----------*/
 
 .shadow {
     pointer-events: none;
@@ -123,8 +30,13 @@ header p {
 }
 
 #home h1 {
+    cursor: pointer;
     font-size: var(--home-h1);
     line-height: var(--home-line-height);
+}
+
+#home h1:hover {
+    color: #F79C1D;
 }
 
 #home p {
@@ -186,6 +98,14 @@ header p {
 }
 
 /*------------------------------- OPTIONS ------------*/
+
+/*--------------------------------- CONTACT ----------*/
+
+#contact {
+    background-color: #000000;
+}
+
+/*--------------------------------- CONTACT ----------*/
 
 @media only screen and (max-width: 640px) {
     header.pos-a {
