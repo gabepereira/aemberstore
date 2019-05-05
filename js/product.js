@@ -7,5 +7,6 @@ function load() {
 }
 
 function getProductBySlug() {
-    
+    let hash = window.location.hash;
+    console.log(hash);
 }
