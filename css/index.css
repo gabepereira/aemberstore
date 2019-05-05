@@ -4,6 +4,9 @@ section:nth-child(3) {
 
 .shadow {
     pointer-events: none;
+    background: -webkit-gradient(linear, right top, left top, from(#000000bd), color-stop(50%, #00000060), color-stop(90%, #00000000), to(#00000021));
+    background: -webkit-linear-gradient(right, #000000bd 0%, #00000060 50%, #00000000 90%, #00000021 100%);
+    background: -o-linear-gradient(right, #000000bd 0%, #00000060 50%, #00000000 90%, #00000021 100%);
     background: linear-gradient(270deg, #000000bd 0%, #00000060 50%, #00000000 90%, #00000021 100%);
 }
 
@@ -56,8 +59,11 @@ section:nth-child(3) {
 
 #product-wrapper {
     padding: 24px 0 0;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .product {
@@ -65,11 +71,18 @@ section:nth-child(3) {
     padding: 12px;
     width: 220px;
     height: 360px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     border-width: 1px;
     border-style: solid;
     border-color: transparent;
+    -webkit-transition: border-color 0.25s ease;
+    -o-transition: border-color 0.25s ease;
     transition: border-color 0.25s ease;
 }
 
@@ -83,6 +96,8 @@ section:nth-child(3) {
 .product-info {
     cursor: pointer;
     height: 96px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -91,6 +106,8 @@ section:nth-child(3) {
     color: #FFFFFF;
     cursor: pointer;
     margin: auto;
+    -webkit-transition: color 0.25s ease;
+    -o-transition: color 0.25s ease;
     transition: color 0.25s ease;
 }
 

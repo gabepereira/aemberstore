@@ -125,6 +125,8 @@ section, .shadow {
 /*-------------------------------- HEADER ----------------------*/
 
 header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background-color: #000000;
 }
@@ -170,6 +172,8 @@ header .upper a.signup {
 
 header a {
     margin: auto var(--header-lower-margin);
+    -webkit-transition: color 0.25s ease;
+    -o-transition: color 0.25s ease;
     transition: color 0.25s ease;
 }
 
@@ -196,6 +200,8 @@ header p {
 #aember .white, #search .white, #account .white, #menu .white, #account-menu .white {
     cursor: pointer;
     fill: #FFFFFF;
+    -webkit-transition: fill 0.25s ease;
+    -o-transition: fill 0.25s ease;
     transition: fill 0.25s ease;
 }
 
@@ -230,6 +236,12 @@ header p {
     #home h1 {
         font-size: var(--mob-home-h1);
         line-height: var(--mob-home-line-height);
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .container {
+        width: 90%;
     }
 }
 
