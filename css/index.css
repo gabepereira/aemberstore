@@ -99,13 +99,6 @@ section:nth-child(3) {
 
 /*------------------------------- OPTIONS ------------*/
 
-/*--------------------------------- CONTACT ----------*/
-
-#contact {
-    background-color: #000000;
-}
-
-/*--------------------------------- CONTACT ----------*/
 
 @media only screen and (max-width: 640px) {
     header.pos-a {
