@@ -8,23 +8,26 @@ function load() {
 
 function getProductBySlug() {
     let slug = window.location.hash.split('#')[1];
-    console.log(slug);
-    let product = fetch(api + 'product/' + slug, {
-        method: 'GET'
-    })
-    .then((res) => res.json())
-    .then(function(data) {
-        return data;
-    }) 
-    .catch(function(e) {
-        console.log(e);
-    });
-
-    product.then(function(data) {
-        createCase(data);
-    }).catch(function(e) {
-        console.log(e);
-    });
+    if (!slug) {
+        console.log('i dont see slug');
+    } else {
+        let product = fetch(api + 'product/' + slug, {
+            method: 'GET'
+        })
+        .then((res) => res.json())
+        .then(function(data) {
+            return data;
+        }) 
+        .catch(function(e) {
+            console.log(e);
+        });
+    
+        product.then(function(data) {
+            createCase(data);
+        }).catch(function(e) {
+            console.log(e);
+        });
+    }
 }
 
 function createCase(data) {

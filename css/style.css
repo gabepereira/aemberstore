@@ -8,12 +8,10 @@
     --mob-menu: calc(20px + (24 - 20) * ((100vw - 320px) / (640 - 320)));
     --mob-home-h1: calc(56px + (64 - 56) * ((100vw - 320px) / (640 - 320)));
     --mob-home-line-height: calc(52px + (64 - 52) * ((100vw - 320px) / (640 - 320)));
-    --product-img-x: calc(180px + (360 - 180) * ((100vw - 640px) / (1600 - 640)));
-    --product-img-y: calc(290px + (470 - 290) * ((100vw - 640px) / (1600 - 640)));
-    --product-description: calc(12px + (20 - 12) * ((100vw - 640px) / (1600 - 640)));
-    --mob-product-img-x: calc(250px + (430 - 250) * ((100vw - 640px) / (640 - 120)));
-    --mob-product-img-y: calc(360px + (540 - 360) * ((100vw - 640px) / (640 - 120)));
-    --mob-product-description: calc(16px + (22 - 16) * ((100vw - 640px) / (640 - 120)));
+    --product-img: calc(400px + (500 - 400) * ((100vw - 640px) / (1600 - 640)));
+    --mob-product-img: calc(400px + (500 - 400) * ((100vw - 640px) / (640 - 320)));
+    --sizes: calc(36px + (56 - 36) * ((100vw - 320px) / (1600 - 640)));
+    --padding: calc(18px + (24 - 18) * ((100vw - 320px) / (1600 - 640)));
 }
 
 * { -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: default; }

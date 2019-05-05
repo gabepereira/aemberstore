@@ -62,17 +62,22 @@ section:nth-child(3) {
 
 .product {
     margin: 12px;   
+    padding: 12px;
     width: 220px;
     height: 360px;
     display: flex;
     flex-direction: column;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    transition: border-color 0.25s ease;
 }
 
 .product-img {
     z-index: 0;
-    background-color: #FFFFFF;
     cursor: pointer;
     height: 100%;
+    background-color: #303030;
 }
 
 .product-info {
@@ -93,7 +98,11 @@ section:nth-child(3) {
     color: #F79C1D;
 }
 
-.product-info:hover .product-name {
+.product:hover {
+    border-color: #F79C1D;
+}
+
+.product-info:hover .product-name, .product:hover .product-name {
     color: #F79C1D;
 }
 
