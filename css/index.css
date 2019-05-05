@@ -82,7 +82,7 @@ section:nth-child(3) {
 }
 
 .product-name {
-    font-size: var(--header-lower);
+    font-size: 18px;
     color: #FFFFFF;
     cursor: pointer;
     margin: auto;
@@ -101,35 +101,11 @@ section:nth-child(3) {
 
 
 @media only screen and (max-width: 640px) {
-    header.pos-a {
-        z-index: 1;
-        position: fixed;
-    }
-
-    header a, #search, header .upper, .white-line {
-        display: none;
-    }
-
-    #menu {
-        height: var(--mob-menu);
-        display: block;
-    }
-
     .col5:nth-child(1) {
         width: 0%;
     }
 
     .col5:nth-child(2) {
         width: 100%;
-    }
-
-    #home .col5 p.r, #home .col5 h1.r {
-        text-align: center;
-        margin-right: auto;
-    }
-
-    #home h1 {
-        font-size: var(--mob-home-h1);
-        line-height: var(--mob-home-line-height);
     }
 }

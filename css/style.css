@@ -8,6 +8,12 @@
     --mob-menu: calc(20px + (24 - 20) * ((100vw - 320px) / (640 - 320)));
     --mob-home-h1: calc(56px + (64 - 56) * ((100vw - 320px) / (640 - 320)));
     --mob-home-line-height: calc(52px + (64 - 52) * ((100vw - 320px) / (640 - 320)));
+    --product-img-x: calc(180px + (360 - 180) * ((100vw - 640px) / (1600 - 640)));
+    --product-img-y: calc(290px + (470 - 290) * ((100vw - 640px) / (1600 - 640)));
+    --product-description: calc(12px + (20 - 12) * ((100vw - 640px) / (1600 - 640)));
+    --mob-product-img-x: calc(250px + (430 - 250) * ((100vw - 640px) / (640 - 120)));
+    --mob-product-img-y: calc(360px + (540 - 360) * ((100vw - 640px) / (640 - 120)));
+    --mob-product-description: calc(16px + (22 - 16) * ((100vw - 640px) / (640 - 120)));
 }
 
 * { -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: default; }
@@ -177,11 +183,11 @@ header p {
     color: #CCCCCC;
 }
 
-#menu {
+#menu, #account-menu {
     display: none;
 }
 
-#search {
+#search, #account-menu {
     height: var(--header-lower);;
 }
 
@@ -189,14 +195,44 @@ header p {
     height: 18px;
 }
 
-#aember .white, #search .white, #account .white, #menu .white {
+#aember .white, #search .white, #account .white, #menu .white, #account-menu .white {
     cursor: pointer;
     fill: #FFFFFF;
     transition: fill 0.25s ease;
 }
 
-#aember:hover .white, #search:hover .white, #account:hover .white {
+#aember:hover .white, #search:hover .white, #account:hover .white, #account-menu:hover .white {
     fill: #F79C1D;
+}
+
+@media only screen and (max-width: 640px) {
+    .container {
+        width: 85%;
+    }
+
+    header.pos-a {
+        z-index: 1;
+        position: fixed;
+    }
+
+    header a, #search, header .upper, .white-line {
+        display: none;
+    }
+
+    #menu, #account-menu {
+        height: var(--mob-menu);
+        display: block;
+    }
+
+    #home .col5 p.r, #home .col5 h1.r {
+        text-align: center;
+        margin-right: auto;
+    }
+
+    #home h1 {
+        font-size: var(--mob-home-h1);
+        line-height: var(--mob-home-line-height);
+    }
 }
 
 /*-------------------------------- HEADER ----------------------*/

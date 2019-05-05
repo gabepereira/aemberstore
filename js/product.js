@@ -34,5 +34,5 @@ function createCase(data) {
 
     product_name.innerHTML = data.title;
     description.innerHTML = data.description;
-    price.innerHTML = data.price;
+    price.innerHTML = 'R$' + data.price;
 }
