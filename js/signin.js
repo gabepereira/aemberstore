@@ -6,7 +6,6 @@ let load = () => {
     let email = document.getElementById('email');
     let password = document.getElementById('pass');
     let btn = document.getElementById('signin-btn');
-    let signinWrapper = document.getElementById('signin-wrapper');
     let result = document.getElementById('result');
 
     btn.addEventListener('click', function(e) {
@@ -19,6 +18,7 @@ let load = () => {
             sessionStorage.setItem('name', response.data.name);
             window.location = home;
         }).catch(function(e) {
+            // authentication failure
             console.log(e);
             result.classList.remove('none');
             result.innerHTML = 'Error: ' + e;
