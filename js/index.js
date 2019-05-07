@@ -34,7 +34,7 @@ let createProductItem = (data) => {
     let product_name = document.createElement('div');
 
     let dev = ''
-    a.href = window.location + 'product' + dev + '#' + data.slug;
+    a.href = window.location + 'product' + dev + '?' + data.slug;
 
     product_name.innerHTML = data.title;
 

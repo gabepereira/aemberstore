@@ -7,7 +7,9 @@ function load() {
 }
 
 function getProductBySlug() {
-    let slug = window.location.hash.split('#')[1];
+    let slug = (window.location.search.split('?'))[1];
+    console.log(slug);
+
     if (!slug) {
         console.log('i dont see slug');
     } else {
