@@ -3,6 +3,7 @@ window.onload = function() {
 }
 
 function load() {
+    aember.loadToken(localStorage.getItem('token'));
     recentProducts(api);
 }
 
@@ -33,7 +34,7 @@ let createProductItem = (data) => {
     let product_info = document.createElement('div');
     let product_name = document.createElement('div');
 
-    let dev = ''
+    let dev = '.html'
     a.href = window.location + 'product' + dev + '?' + data.slug;
 
     product_name.innerHTML = data.title;
@@ -46,4 +47,15 @@ let createProductItem = (data) => {
     product_info.appendChild(product_name);
     a.append(product_img, product_info);
     document.getElementById('product-wrapper').appendChild(a);
+}
+
+let aember = {
+
+    load: () => {
+
+    },
+
+    loadToken: (token) => {
+        console.log(token);
+    }
 }
