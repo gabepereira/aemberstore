@@ -75,9 +75,14 @@ a {
     height: 100%;
 }
 
-section, .shadow {
+section, .shadow, .bg {
     width: 100vw;
     height: 100vh;
+}
+
+.shadow {
+    pointer-events: none;
+    background: linear-gradient(270deg, #000000bd 0%, #00000060 50%, #00000021 100%);
 }
 
 .pos {

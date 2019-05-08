@@ -34,8 +34,8 @@ let createProductItem = (data) => {
     let product_info = document.createElement('div');
     let product_name = document.createElement('div');
 
-    let dev = '.html'
-    a.href = window.location + 'product' + dev + '?' + data.slug;
+    let _html = ''
+    a.href = window.location + 'product' + _html + '?' + data.slug;
 
     product_name.innerHTML = data.title;
 
@@ -50,12 +50,12 @@ let createProductItem = (data) => {
 }
 
 function loadData() {
-    if (aember.storageToken != true) return;
+    if (!aember.storageToken('local')) return;
     else {
         let authBox = document.getElementById('auth-wrapper');
         let tokenName = document.getElementById('token-name');
         authBox.classList.add('none');
         tokenName.classList.remove('none');
-        tokenName.innerHTML = aember.storageName('session').toUpperCase();
+        tokenName.innerHTML = aember.storageName('local').toUpperCase();
     }
 }

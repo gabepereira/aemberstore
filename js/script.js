@@ -4,7 +4,7 @@ const home = 'https://aemberstore.com';
 let aember = {
 
     load: () => {
-
+        console.log('ÆMBER STORE - Streetwear Clothing\nGrandmont Studio - E-Commerce API - 1.0.0\nhttps://github.com/gabepereira/e-commerce-api');
     },
 
     storageToken: (storage) => {
@@ -36,3 +36,5 @@ let aember = {
         }
     }
 }
+
+aember.load();

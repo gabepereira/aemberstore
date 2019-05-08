@@ -36,8 +36,14 @@ function createCase(data) {
     let product_name = document.getElementById('product-name');
     let description = document.getElementById('description');
     let price = document.getElementById('price');
+    let tenX = document.getElementById('times-of');
+    let xCalc = document.getElementById('times-calc');
+    let times = 10 //times you want to divide the total amount.
 
     product_name.innerHTML = data.title;
     description.innerHTML = data.description;
+
     price.innerHTML = 'R$' + data.price;
+    tenX.innerHTML = times + 'x';
+    xCalc.innerHTML = 'R$' + (data.price / times);
 }

@@ -1,0 +1,141 @@
+:root {
+    --auth-wrapper: calc(400px + (450 - 400) * ((100vw - 640px) / (1600 - 640)));
+    --form-wrapper: calc(250px + (300 - 250) * ((100vw - 640px) / (1600 - 640)));
+}
+
+h1, p {
+    color: #FFFFFF;
+}
+
+section {
+    background-color: transparent;
+}
+
+.shadow {
+    background: linear-gradient(90deg, #000000 30%, #00000000 50%);
+    mix-blend-mode: color;
+}
+
+#background {
+    background: url(../img/auth.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+#auth-wrapper {
+    width: var(--auth-wrapper);
+    height: 80%;
+    background-color: #000000;
+    border-radius: 15px;
+}
+
+.form {
+    width: var(--form-wrapper);
+    height: auto;
+}
+
+.form h1 {
+    font-size: 13pt;
+}
+
+input {
+    margin: 6px 0 0px;
+    width: auto;
+    cursor: text;
+    outline: none;
+    padding: 12px 18px;
+    height: 20px;
+    border-radius: 50px;
+    color: #FFFFFF;
+    border: 1px solid #303030;
+    background-color: #000000;
+    transition: border 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+}
+
+input:hover {
+    border: 1px solid #FFFFFF;
+}
+
+input:active, input:focus {
+    border: 1px solid #FFFFFF;
+    background-color: #101010;
+}
+
+.signin {
+    margin: 15% auto 5%;
+}
+
+.signin-btn {
+    width: 150px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 50px;
+    transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.signin-btn h1 {
+    color: #000000;
+    cursor: pointer;
+    transition: color 0.25s ease;
+}
+
+.signin-btn:hover {
+    background-color: #000000;
+    border-color: #FFFFFF;
+}
+
+.signin-btn:hover h1 {
+    color: #FFFFFF;
+}
+
+.signin-text {
+    text-align: center;
+    margin: -10px;
+}
+
+.logo {
+    height: calc(var(--header-logo) * 1.3);
+}
+
+#aember .white {
+    fill: #F79C1D;
+}
+
+#aember:hover .white {
+    fill: #FFFFFF;
+}
+
+.error {
+    color: #FF0B55;
+    border-color: #FF0B55;
+}
+
+.error::placeholder {
+    color: #FF0B55; 
+}
+
+@media only screen and (max-width: 640px) {
+    .container {
+        width: 100%;
+    }
+
+    #auth-wrapper {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+    
+}
+
+#not-a-user-yet {
+    margin: 0 6px 0 0;
+}
+
+#sign-up-link {
+    color: #F79C1D;
+    transition: color 0.25s ease;
+}
+
+#sign-up-link:hover {
+    color: #FAC983;
+}

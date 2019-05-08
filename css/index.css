@@ -2,14 +2,6 @@ section:nth-child(3) {
     background-color: #000000;
 }
 
-.shadow {
-    pointer-events: none;
-    background: -webkit-gradient(linear, right top, left top, from(#000000bd), color-stop(50%, #00000060), color-stop(90%, #00000000), to(#00000021));
-    background: -webkit-linear-gradient(right, #000000bd 0%, #00000060 50%, #00000000 90%, #00000021 100%);
-    background: -o-linear-gradient(right, #000000bd 0%, #00000060 50%, #00000000 90%, #00000021 100%);
-    background: linear-gradient(270deg, #000000bd 0%, #00000060 50%, #00000000 90%, #00000021 100%);
-}
-
 /*-------------------------- HOME -------------*/
 
 
