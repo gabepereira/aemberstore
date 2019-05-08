@@ -14,8 +14,12 @@ let load = () => {
             password.value
         ).then(function(response) {
             console.log(response);
-            sessionStorage.setItem('token', response.token);
-            sessionStorage.setItem('name', response.data.name);
+            aember.createToken({
+                token: response.token,
+                name: response.data.name,
+                storage: 'local'
+            });
+            
             window.location = home;
         }).catch(function(e) {
             // authentication failure

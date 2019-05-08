@@ -48,14 +48,3 @@ let createProductItem = (data) => {
     a.append(product_img, product_info);
     document.getElementById('product-wrapper').appendChild(a);
 }
-
-let aember = {
-
-    load: () => {
-
-    },
-
-    loadToken: (token) => {
-        console.log(token);
-    }
-}
