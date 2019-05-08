@@ -3,7 +3,7 @@ window.onload = function() {
 }
 
 function load() {
-    aember.loadToken(localStorage.getItem('token'));
+    loadData();
     recentProducts(api);
 }
 
@@ -47,4 +47,15 @@ let createProductItem = (data) => {
     product_info.appendChild(product_name);
     a.append(product_img, product_info);
     document.getElementById('product-wrapper').appendChild(a);
+}
+
+function loadData() {
+    if (aember.storageToken != true) return;
+    else {
+        let authBox = document.getElementById('auth-wrapper');
+        let tokenName = document.getElementById('token-name');
+        authBox.classList.add('none');
+        tokenName.classList.remove('none');
+        tokenName.innerHTML = aember.storageName('session').toUpperCase();
+    }
 }

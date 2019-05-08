@@ -148,11 +148,11 @@ header .lower {
     height: 1px;
 }
 
-header h1, header a {
+header h1, header a, #token-name {
     color: #FFFFFF;
 }
 
-header p, header .upper a {
+header p, header .upper a, #token-name {
     font-size: var(--header-upper);
 }
 
@@ -165,7 +165,7 @@ header .lower a {
     height: var(--header-logo);
 }
 
-header .upper a.signup {
+header .upper a.signup, #token-name {
     margin-right: 6px;
     font-weight: 600;
 }
@@ -177,7 +177,7 @@ header a {
     transition: color 0.25s ease;
 }
 
-header a:hover {
+header a:hover, #token-name:hover {
     color: #F79C1D;
 }
 
