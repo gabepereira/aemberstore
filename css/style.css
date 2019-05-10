@@ -153,6 +153,10 @@ header .lower {
     height: 1px;
 }
 
+#token-name {
+    margin-right: var(--header-lower-margin);
+}
+
 header h1, header a, #token-name {
     color: #FFFFFF;
 }
@@ -170,12 +174,12 @@ header .lower a {
     height: var(--header-logo);
 }
 
-header .upper a.signup, #token-name {
-    margin-right: 6px;
+header .upper a.signup {
+    margin-right: var(--header-lower-margin);
     font-weight: 600;
 }
 
-header a {
+header a, #token-name {
     margin: auto var(--header-lower-margin);
     -webkit-transition: color 0.25s ease;
     -o-transition: color 0.25s ease;
@@ -194,7 +198,7 @@ header p {
     display: none;
 }
 
-#search, #account-menu {
+#search, #account-menu, #cart {
     height: var(--header-lower);;
 }
 
@@ -202,7 +206,7 @@ header p {
     height: 18px;
 }
 
-#aember .white, #search .white, #account .white, #menu .white, #account-menu .white {
+#aember .white, #search .white, #account .white, #menu .white, #account-menu .white, #cart .white {
     cursor: pointer;
     fill: #FFFFFF;
     -webkit-transition: fill 0.25s ease;
@@ -210,8 +214,37 @@ header p {
     transition: fill 0.25s ease;
 }
 
-#aember:hover .white, #search:hover .white, #account:hover .white, #account-menu:hover .white {
+#aember:hover .white, #search:hover .white, #account:hover .white, #account-menu:hover .white, #cart:hover .white {
     fill: #F79C1D;
+}
+
+#cart-wrapper {
+    width: auto;
+    height: 100%;
+    background-color: #303030;
+}
+
+#cart-wrapper path {
+    transition: fill 0.25s ease;
+    fill: #FFFFFF;
+}
+
+#cart-wrapper svg:hover path {
+    fill: #F79C1D;
+}
+
+#cart-wrapper #qty:hover {
+    color: #F79C1D;
+}
+
+#cart-wrapper > * {
+    margin: auto calc(var(--header-lower-margin) / 2);
+}
+
+#qty {
+    transition: color 0.25s ease;
+    font-size: var(--header-lower);
+    color: #FFFFFF;
 }
 
 @media only screen and (max-width: 640px) {
