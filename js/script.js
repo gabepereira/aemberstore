@@ -1,10 +1,20 @@
 const api = 'https://warm-caverns-31460.herokuapp.com/';
-const home = 'https://aemberstore.com';
+const home = '/';
 
 let aember = {
 
     load: () => {
-        console.log('ÆMBER STORE - Streetwear Clothing\nGrandmont Studio - E-Commerce API - 1.0.0\nhttps://github.com/gabepereira/e-commerce-api');
+        let data = aember.info();
+        data.then(function(data) {
+            let date = '';
+            // for (let i in data.version) date += JSON.parse(data.version[i]) + '.';
+            console.log(
+                data.store.name + '\n' + data.store.github + '' +
+                date + '\n' + 'Developed by - ' + data.author.name + '.'
+            );
+        }).catch(function(e) {
+            console.log(e);
+        })
     },
 
     storageToken: (storage) => {
@@ -34,6 +44,16 @@ let aember = {
         } else {
             console.log('Error on creating token.');
         }
+    },
+
+    info: async () => {
+        return await fetch('../config.json', {
+            method: 'GET'
+        }).then(function(res) {
+            return res.json();
+        }).catch(function(e) {
+            console.log(e);
+        });
     }
 }
 

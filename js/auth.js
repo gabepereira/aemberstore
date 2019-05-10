@@ -41,20 +41,14 @@ let auth = {
             email.value,
             password.value
         ).then(function(response) {
-            if (!response) {
-                return;
-            } else if (response) {
-                if (response.status != 201)
-                    errors = response.errors;
-                else {
-                    aember.createToken({
-                        token: response.token,
-                        name: response.data.name,
-                        storage: 'local'
-                    });
-                }
-            } else {
-                return;
+            if (!response || response.status) 
+                errors = response.errors;
+            else {
+                aember.createToken({
+                    token: response.token,
+                    name: response.data.name,
+                    storage: 'local'
+                });
             }
         }).catch(function(e) {
             console.log(e);
