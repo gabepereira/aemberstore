@@ -6,15 +6,13 @@ let aember = {
     load: () => {
         let data = aember.info();
         data.then(function(data) {
-            let date = '';
-            // for (let i in data.version) date += JSON.parse(data.version[i]) + '.';
             console.log(
                 data.store.name + '\n' + data.store.github + '' +
-                date + '\n' + 'Developed by - ' + data.author.name + '.'
+                '\n' + 'Developed by - ' + data.author.name + '.'
             );
         }).catch(function(e) {
             console.log(e);
-        })
+        });
     },
 
     storageToken: (storage) => {
