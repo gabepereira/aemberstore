@@ -15,7 +15,6 @@ let load = () => {
     }
 
     btn.addEventListener('click', function() {
-        // tries to sign in
         auth.signIn(input.email, input.password)
         .then(function(errors) {
             if (!errors) window.location = home;
@@ -42,19 +41,24 @@ let auth = {
             email.value,
             password.value
         ).then(function(response) {
-            if (response.status != 201) {
-                errors = response.errors;
+            if (!response) {
+                return;
+            } else if (response) {
+                if (response.status != 201)
+                    errors = response.errors;
+                else {
+                    aember.createToken({
+                        token: response.token,
+                        name: response.data.name,
+                        storage: 'local'
+                    });
+                }
             } else {
-                aember.createToken({
-                    token: response.token,
-                    name: response.data.name,
-                    storage: 'local'
-                });
+                return;
             }
         }).catch(function(e) {
             console.log(e);
         });
-        console.log(errors);
         return errors;
     },
 
