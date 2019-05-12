@@ -12,6 +12,10 @@
     --mob-product-img: calc(400px + (500 - 400) * ((100vw - 640px) / (640 - 320)));
     --sizes: calc(36px + (56 - 36) * ((100vw - 320px) / (1600 - 640)));
     --padding: calc(18px + (24 - 18) * ((100vw - 320px) / (1600 - 640)));
+
+    --header-upper-height: calc(32px + (38 - 32) * ((100vw - 640px) / (1600 - 640)));
+    --header-lower-height: calc(70px + (76 - 70) * ((100vw - 640px) / (1600 - 640)));
+    --mob-header-height: calc(52px + (64 - 52) * ((100vw - 320px) / (640 - 320)));
 }
 
 * { -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: default; }
@@ -141,11 +145,13 @@ header .upper, header .lower, .white-line {
 }
 
 header .upper {
-    height: 5vh;
+    /* height: 5vh; */
+    height: var(--header-upper-height);
 }
 
 header .lower {
-    height: 10vh;
+    /* height: 10vh; */
+    height: var(--header-lower-height);
 }
 
 .white-line {
@@ -250,6 +256,10 @@ header p {
 @media only screen and (max-width: 640px) {
     .container {
         width: 85%;
+    }
+
+    header {
+        height: var(--mob-header-height);
     }
 
     header.pos-a {
