@@ -66,6 +66,7 @@ a {
 .none { display: none; } .pointer { cursor: pointer; } .nowrap { white-space: nowrap; }
 .t { margin-top: 0; top: 0; } .r { margin-right: 0; right: 0; }
 .b { margin-bottom: 0; bottom: 0; } .l { margin-left: 0; left: 0; }
+.penone { pointer-events: none; }
 
 .container {
     width: 80%;
@@ -159,8 +160,9 @@ header .lower {
     height: 1px;
 }
 
-#token-name {
-    margin-right: var(--header-lower-margin);
+#token-name, #menu-down {
+    margin-right: 12px;
+    transition: color 0.25s ease;
 }
 
 header h1, header a, #token-name {
@@ -185,7 +187,7 @@ header .upper a.signup {
     font-weight: 600;
 }
 
-header a, #token-name {
+header a {
     margin: auto var(--header-lower-margin);
     -webkit-transition: color 0.25s ease;
     -o-transition: color 0.25s ease;
@@ -204,7 +206,7 @@ header p {
     display: none;
 }
 
-#search, #account-menu, #cart {
+#search, #account-menu, #cart, #menu-down {
     height: var(--header-lower);;
 }
 
