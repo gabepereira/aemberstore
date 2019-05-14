@@ -3,7 +3,8 @@ window.onload = function() {
 }
 
 function load() {
-    headerEvents();
+    header.loadToken();
+    header.loadEvent();
     getProductBySlug();
 }
 

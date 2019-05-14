@@ -1,5 +1,5 @@
 const api = 'https://warm-caverns-31460.herokuapp.com/';
-const home = '/';
+const home = 'https://aemberstore.com/';
 
 let aember = {
 
@@ -45,7 +45,9 @@ let aember = {
     },
 
     info: async () => {
-        return await fetch('../config.json', {
+        //let path = home + 'config.json'
+        let path = '/config.json'
+        return await fetch(path, {
             method: 'GET'
         }).then(function(res) {
             return res.json();
