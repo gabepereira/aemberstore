@@ -4,7 +4,9 @@ import './Home.css';
 export default class Home extends React.Component {
     render () {
         return (
-            <h1>Home</h1>
+            <div className = "home">
+                <h1>Hello World!</h1>
+            </div>
         );
     }
 }

@@ -1,0 +1,26 @@
+.logo {
+    width: auto;
+    height: calc(18px + (22 - 18) * ((100vw - 640px) / (1600 - 640)));
+    margin: auto auto auto 0;
+    cursor: pointer;
+}
+
+.logo path, .logo polygon {
+    pointer-events: none;
+    fill: #FFFFFF;
+    transition: fill 0.25s ease;
+}
+
+.logo:hover path, .logo:hover polygon {
+    fill: #F79C1D;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.icon path {
+    fill: #FFFFFF;
+}
