@@ -1,7 +1,0 @@
-node_modules
-.netlify
-functions
-netlify.toml
-admin
-package.json
-package-lock.json
