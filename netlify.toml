@@ -1,0 +1,14 @@
+[build]
+    command = "# no build command"
+    functions = "functions"
+    publish = "."
+
+[[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200
+
+[dev] 
+    command = "yarn start"
+    port = 3000
+    publish = "dist"
