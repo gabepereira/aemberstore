@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Icons from '../Icons';
+import Cart from '../Header/Cart';
 
 export default class Search extends React.Component {
     render () {
@@ -11,6 +12,7 @@ export default class Search extends React.Component {
                     </input>
                     { Icons.Search }
                 </div>
+                <Cart />
             </div>
         )
     }

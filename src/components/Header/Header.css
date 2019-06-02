@@ -1,6 +1,7 @@
 .header-wrapper,
 .upper-header,
 .header,
+.header .cart-wrapper,
 .header-wrapper .container {
     display: flex;
 }
@@ -23,6 +24,12 @@
     background-color: #101010;
 }
 
+.header a {
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
 .header-wrapper .container {
     width: 80%;
     margin: auto;
@@ -33,6 +40,12 @@
     height: 1px;
     border: none;
     background-color: #AAAAAA;
+}
+
+.header .icon {
+    width: 20px;
+    height: 20px;
+    margin: auto 0 auto 18px;
 }
 
 .upper-header p {
@@ -55,6 +68,7 @@
     display: flex;
     padding: 6px 18px;
     border-radius: 50px;
+    transition: background-color 0.25s ease;
 }
 
 .search-box input {
@@ -66,6 +80,12 @@
     outline: none;
 }
 
-.search-box svg {
+.search-box .icon {
+    width: 24px;
+    height: 24px;
     margin: auto 0 auto 12px;
+}
+
+.search-box:hover {
+    background-color: #404040;
 }
