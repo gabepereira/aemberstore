@@ -23,4 +23,5 @@ yarn-error.log*
 #netlify
 
 /.netlify
+/functions
 netlify.toml
