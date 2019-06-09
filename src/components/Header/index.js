@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import Icons from '../Icons';
-import Search from './Search';
+import Search from '../Search';
 
 export default class Header extends React.Component {
     state = {
@@ -24,7 +24,9 @@ export default class Header extends React.Component {
                         <a href = { this.to('/') }>
                             { Icons.Logo }
                         </a>
-                        <Search />
+                        <Search
+                            placeholder = 'O que você procura?'/>
+                        { Icons.Cart }
                     </div>
                 </div>
             </div>

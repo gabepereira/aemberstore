@@ -56,36 +56,6 @@
     text-transform: uppercase;
 }
 
-.search-wrapper {
+.search {
     margin: auto 0 auto auto;
-    display: flex;
-}
-
-.search-box {
-    height: 32px;
-    width: 196px;
-    background-color: #303030;
-    display: flex;
-    padding: 6px 18px;
-    border-radius: 50px;
-    transition: background-color 0.25s ease;
-}
-
-.search-box input {
-    width: 100%;
-    color: #FFFFFF;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    background: none;
-    border: none;
-    outline: none;
-}
-
-.search-box .icon {
-    width: 24px;
-    height: 24px;
-    margin: auto 0 auto 12px;
-}
-
-.search-box:hover {
-    background-color: #404040;
 }
